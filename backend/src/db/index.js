@@ -5,8 +5,10 @@ import { fileURLToPath } from 'url';
 import { initSchema } from './schema.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const dataDir = path.join(__dirname, '../../data');
+const dataDir = process.env.DATA_DIR || '/app/data';
 const dbPath = path.join(dataDir, 'copilot.db');
+// const dataDir = path.join(__dirname, '../../data');
+// const dbPath = path.join(dataDir, 'copilot.db');
 
 let db;
 

@@ -24,7 +24,7 @@ See full SDD specs in [`docs/sdd/`](docs/sdd/).
 | **Product** | Defined Monitor/Analyze loops in SDD requirements; scoped v1 to close loop from logs → recommendations |
 | **Design** | Dark observability UI patterned after monitoring tools; agent → call → segment drill-down |
 | **Engineering** | Node.js API + rule-based analysis engine; Vue 3 dashboard |
-| **QA** | 6 seeded demo calls covering greeting failures, escalations, compliance, confusion |
+| **QA** | 3 demo calls covering greeting failures, escalations, compliance, confusion |
 
 ## What's Real vs Mocked
 

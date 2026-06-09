@@ -10,7 +10,8 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors({
-  origin: process.env.CORS_ORIGIN?.split(',') || ['http://localhost:5173', 'https://app.gohighlevel.com'],
+  origin: process.env.CORS_ORIGIN?.split(',') || ['http://localhost:5173', 'https://app.gohighlevel.com', 'https://voice-ai-observability-copilot-ui.vercel.app',
+    'https://voice-ai-observability-copilot-lxnio5pvz-surajpersonal.vercel.app'],
   credentials: true,
 }));
 app.use(express.json({ limit: '2mb' }));

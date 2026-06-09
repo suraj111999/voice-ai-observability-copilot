@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_URL || '';
+const API_BASE =  'https://voice-ai-observability-copilot-production.up.railway.app';
 
 export async function api(path, options = {}) {
   const res = await fetch(`${API_BASE}${path}`, {

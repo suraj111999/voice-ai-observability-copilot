@@ -1,0 +1,34 @@
+{
+  "name": "Voice AI Observability Copilot",
+  "description": "Automated Monitor and Analyze loops for HighLevel Voice AI agents. Tracks call transcripts against KPIs and surfaces actionable recommendations.",
+  "version": "1.0.0",
+  "distribution": "agency",
+  "category": "analytics",
+  "integration": {
+    "type": "custom_js",
+    "entry": "embed.js",
+    "permissions": ["voice_ai.read", "locations.read"]
+  },
+  "webhooks": [
+    {
+      "event": "transcript.generated",
+      "endpoint": "/webhooks/ghl/transcript"
+    }
+  ],
+  "settings": [
+    {
+      "key": "copilot_url",
+      "label": "Dashboard URL",
+      "type": "url",
+      "required": true,
+      "default": "http://localhost:5173"
+    },
+    {
+      "key": "api_url",
+      "label": "Backend API URL",
+      "type": "url",
+      "required": true,
+      "default": "http://localhost:3001"
+    }
+  ]
+}
